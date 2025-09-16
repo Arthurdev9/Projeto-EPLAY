@@ -73,7 +73,7 @@ export const Quantity = styled.p`
 export const CartItem = styled.li`
   display: flex;
   border-bottom: 1px solid ${colors.lightgray};
-  padding: 8px 0;
+  padding: 26px 0;
   position: relative;
 
   img {

@@ -1,12 +1,11 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
-export const Itens = styled.ul`
+export const Items = styled.ul`
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
 `
-
 export const Action = styled.div`
   position: absolute;
   top: 0;
@@ -23,9 +22,9 @@ export const Action = styled.div`
 
 export const Item = styled.li`
   position: relative;
-
+  cursor: zoom-in;
   > img {
-    border: 2px solid ${cores.branca};
+    border: 2px solid ${colors.white};
     border-radius: 8px;
     width: 150px;
     height: 150px;
@@ -39,7 +38,6 @@ export const Item = styled.li`
     }
   }
 `
-
 export const Modal = styled.div`
   position: fixed;
   top: 0;
@@ -51,7 +49,7 @@ export const Modal = styled.div`
   align-items: center;
   justify-content: center;
 
-  &.visivel {
+  &.is-visible {
     display: flex;
   }
 
@@ -69,7 +67,6 @@ export const ModalContent = styled.div`
   max-width: 960px;
   position: relative;
   z-index: 1;
-
   header {
     display: flex;
     justify-content: space-between;
@@ -79,21 +76,23 @@ export const ModalContent = styled.div`
       font-size: 18px;
       font-weight: bold;
     }
+
+    img {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
   }
 
-  > img {
-    width: 100%;
-  }
-
-  img,
+  > img,
   iframe {
     display: block;
     max-width: 100%;
+    width: 100%;
   }
 
   iframe {
     width: 100%;
     height: 480px;
-    border: none;
   }
 `

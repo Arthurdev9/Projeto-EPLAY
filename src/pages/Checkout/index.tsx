@@ -136,7 +136,7 @@ const Checkout = () => {
   useEffect(() => {
     const calculateInstallments = () => {
       const installmentsArray: Installment[] = []
-      for (let i = 0; i <= 6; i++) {
+      for (let i = 1; i <= 6; i++) {
         installmentsArray.push({
           quantity: i,
           amount: totalPrice / i,
@@ -429,7 +429,7 @@ const Checkout = () => {
                               value={installment.quantity}
                               key={installment.quantity}
                             >
-                              {installment.quantity} de{' '}
+                              {installment.quantity}x de{' '}
                               {installment.formattedAmount}
                             </option>
                           ))}
